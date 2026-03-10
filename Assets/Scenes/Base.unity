@@ -199,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8207075264191696257, guid: b349e6d3d43b26a4f97d88daafd22a57, type: 3}
       propertyPath: goalPosition
-      value: 10
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8207075264191696257, guid: b349e6d3d43b26a4f97d88daafd22a57, type: 3}
       propertyPath: bulletManager
@@ -581,31 +581,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7778631068819076643, guid: ed0d8989244e9fb42bfaac376ccdc7fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2436947
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7778631068819076643, guid: ed0d8989244e9fb42bfaac376ccdc7fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5434624
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7778631068819076643, guid: ed0d8989244e9fb42bfaac376ccdc7fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.3055506
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7778631068819076643, guid: ed0d8989244e9fb42bfaac376ccdc7fa, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.18914795
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7778631068819076643, guid: ed0d8989244e9fb42bfaac376ccdc7fa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08554081
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7778631068819076643, guid: ed0d8989244e9fb42bfaac376ccdc7fa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9774745
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7778631068819076643, guid: ed0d8989244e9fb42bfaac376ccdc7fa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.03807243
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065026292247957152, guid: ed0d8989244e9fb42bfaac376ccdc7fa, type: 3}
       propertyPath: Target.TrackingTarget

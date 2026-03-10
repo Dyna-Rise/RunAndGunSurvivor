@@ -45,16 +45,21 @@ public class Wall : MonoBehaviour
     {
         if (currentDamage != null) return; //ダメージコルーチン中ならキャンセル
 
+        Debug.Log("ぶつかった１");
         //衝突相手が「Bullet」タグを持っていた場合
         if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "Sword")
         {
+            Debug.Log("ぶつかった２");
             //相手がどのタグなのを取得
             string tag = other.gameObject.tag;
+            Debug.Log("相手のタグ：" + tag);
 
             //ダメージコルーチンを発動
             currentDamage = StartCoroutine(DamageCol(tag));
             if(life <= 0) //lifeが残っていなければ消滅
             {
+                ScoreManager.ScoreUp(point); //敵撃破でスコアアップ
+
                 CreateEffect();
             }
         }
@@ -71,6 +76,7 @@ public class Wall : MonoBehaviour
         }
         else if(tag == "Sword")
         {
+            Debug.Log("ソード触れた");
             life -= player.GetComponent<NormalSword>().GetSwordPower();
         }
 
