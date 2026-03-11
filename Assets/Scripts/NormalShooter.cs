@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,12 @@ public class NormalShooter : MonoBehaviour
     [Header("ソードのスクリプト")]
     public NormalSword normalSword;
 
+    bool inputAvail;
+
+    AudioSource[] playerAudio;
+    [Header("SE音源")]
+    public AudioClip se_Shot;
+
     //InputAction(Playerマップ)のAttackアクションがおされたら
     void OnAttack(InputValue value)
     {
@@ -41,7 +48,11 @@ public class NormalShooter : MonoBehaviour
         }
         else
         {
-            Shoot();
+            if (inputAvail)
+            {
+
+                Shoot();
+            }
         }
     }
 
@@ -50,6 +61,7 @@ public class NormalShooter : MonoBehaviour
         //残数があれば
         if (bulletManager.GetBulletRemaining() > 0)
         {
+            playerAudio[0].PlayOneShot(se_Shot);
             //プレハブの生成と生成情報の取得
             GameObject obj = Instantiate(
                 bulletPrefabs,//何を
@@ -78,6 +90,14 @@ public class NormalShooter : MonoBehaviour
     {
         //指定したタグを持っているオブジェクトを取得
         bullets = GameObject.FindGameObjectWithTag("Bullets");
+        StartCoroutine(InputAvailCol());
+        playerAudio = GetComponents<AudioSource>();
+    }
+
+    IEnumerator InputAvailCol()
+    {
+        yield return new WaitForSeconds(1.0f);
+        inputAvail = true;
     }
 
     //威力を上げるメソッド
